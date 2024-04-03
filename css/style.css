@@ -189,6 +189,11 @@
     background-size: cover;
 }
 
+.page-header-kambing {
+    background: url(../img/banner-kambing.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
