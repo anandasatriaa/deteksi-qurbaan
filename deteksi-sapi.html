@@ -100,6 +100,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title" id="question"></h5>
+           <img id="questionImage" src="" alt="Gambar Pertanyaan" style="display: none; width: 100%; height: auto;">
           <div id="options"></div>
           <div class="text-center mt-3">
             <button class="btn btn-primary" onclick="previousQuestion()">Sebelumnya</button>
@@ -215,52 +216,63 @@ let questions = [
   {
     question: "Apakah Anda memiliki sapi?",
     options: ["Ya", "Tidak"],
-    reason: "Anda tidak memiliki sapi."
+    reason: "Anda tidak memiliki sapi.",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda sudah memiliki dua pasang gigi geraham?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda belum mencapai usia yang cukup. Menurut Hadis, sapi yang akan dikurbankan harus mencapai usia minimal 2 tahun (HR. Ahmad)."
+    reason: "Sapi Anda belum mencapai usia yang cukup. Menurut Hadis, sapi yang akan dikurbankan harus mencapai usia minimal 2 tahun (HR. Ahmad).",
+    invalidAnswers: ["Tidak"],
+    questionImage: "/img/cow.png" 
   },
   {
     question: "Apakah sapi Anda tampak sehat dan kuat?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tampak tidak sehat atau lemah. Menurut Hadis, hewan yang sakit tidak boleh dijadikan hewan qurban (HR. Muslim)."
+    reason: "Sapi Anda tampak tidak sehat atau lemah. Menurut Hadis, hewan yang sakit tidak boleh dijadikan hewan qurban (HR. Muslim).",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda memiliki tanduk?",
     options: ["Ya", "Tidak", "Tanduknya patah"],
-    reason: "Sapi Anda tidak memiliki tanduk atau tanduknya patah. Menurut Hadis, hewan yang tanduknya patah tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+    reason: "Sapi Anda tidak memiliki tanduk atau tanduknya patah. Menurut Hadis, hewan yang tanduknya patah tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+    invalidAnswers: ["Tidak", "Tanduknya patah"]
   },
   {
     question: "Apakah sapi Anda memiliki kepemilikan yang jelas dan bukan hasil pencurian?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tidak memiliki kepemilikan yang jelas atau hasil pencurian. Menurut syariat, hewan qurban harus milik sendiri dan bukan hasil mencuri atau rampasan."
+    reason: "Sapi Anda tidak memiliki kepemilikan yang jelas atau hasil pencurian. Menurut syariat, hewan qurban harus milik sendiri dan bukan hasil mencuri atau rampasan.",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda memiliki kaki yang lengkap dan tidak pincang?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tidak memiliki kaki yang lengkap atau pincang. Menurut Hadis, hewan yang pincang tidak boleh dijadikan hewan qurban (HR. Muslim)."
+    reason: "Sapi Anda tidak memiliki kaki yang lengkap atau pincang. Menurut Hadis, hewan yang pincang tidak boleh dijadikan hewan qurban (HR. Muslim).",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda memiliki mata yang lengkap dan bisa melihat dengan baik?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tidak memiliki mata yang lengkap atau tidak bisa melihat dengan baik. Menurut Hadis, hewan yang buta tidak boleh dijadikan hewan qurban (HR. Muslim)."
+    reason: "Sapi Anda tidak memiliki mata yang lengkap atau tidak bisa melihat dengan baik. Menurut Hadis, hewan yang buta tidak boleh dijadikan hewan qurban (HR. Muslim).",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda memiliki telinga yang lengkap?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tidak memiliki telinga yang lengkap. Menurut Hadis, hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+    reason: "Sapi Anda tidak memiliki telinga yang lengkap. Menurut Hadis, hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda memiliki ekor yang lengkap?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda tidak memiliki ekor yang lengkap. Menurut Hadis, hewan yang ekornya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+    reason: "Sapi Anda tidak memiliki ekor yang lengkap. Menurut Hadis, hewan yang ekornya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+    invalidAnswers: ["Tidak"]
   },
   {
     question: "Apakah sapi Anda tidak sedang hamil?",
     options: ["Ya", "Tidak"],
-    reason: "Sapi Anda sedang hamil. Menurut ulama, hewan yang sedang hamil tidak boleh dijadikan hewan qurban."
+    reason: "Sapi Anda sedang hamil. Menurut ulama, hewan yang sedang hamil tidak boleh dijadikan hewan qurban.",
+    invalidAnswers: ["Ya"]
   }
 ];
 
@@ -271,9 +283,18 @@ let userAnswers = [];
 function showQuestion() {
   let questionElement = document.getElementById('question');
   let optionsElement = document.getElementById('options');
+  let imageElement = document.getElementById('questionImage'); // Pastikan Anda memiliki elemen dengan id ini di HTML Anda
 
   questionElement.textContent = questions[currentQuestion].question;
   optionsElement.innerHTML = '';
+
+    // Jika ada gambar untuk pertanyaan ini, tampilkan gambar tersebut
+  if (questions[currentQuestion].questionImage) {
+    imageElement.src = questions[currentQuestion].questionImage;
+    imageElement.style.display = 'block';
+  } else {
+    imageElement.style.display = 'none';
+  }
 
   for (let i = 0; i < questions[currentQuestion].options.length; i++) {
     let optionElement = document.createElement('div');
@@ -355,7 +376,7 @@ function checkAnswers() {
 
   // Periksa setiap jawaban
   for (let i = 0; i < userAnswers.length; i++) {
-    if (userAnswers[i] === "Tidak" || userAnswers[i] === "Tanduknya patah") {
+    if (questions[i].invalidAnswers.includes(userAnswers[i])) {
       valid = false;
       invalidReasons.push(questions[i].reason);
     }
@@ -366,7 +387,16 @@ function checkAnswers() {
     document.getElementById('resultText').textContent = "Sapi Anda sah untuk dikurbankan.";
   } else {
     // Jika ada jawaban yang tidak valid, tampilkan alasan mengapa sapi tidak sah untuk dikurbankan
-    document.getElementById('resultText').textContent = "Sapi Anda tidak sah untuk dikurbankan karena: " + invalidReasons.join(", ");
+    let resultText = "Sapi Anda tidak sah untuk dikurbankan karena:";
+    let reasonsList = document.createElement('ul');
+    invalidReasons.forEach(reason => {
+      let listItem = document.createElement('li');
+      listItem.textContent = reason;
+      reasonsList.appendChild(listItem);
+    });
+    let resultElement = document.getElementById('resultText');
+    resultElement.innerHTML = resultText;
+    resultElement.appendChild(reasonsList);
   }
 }
 
