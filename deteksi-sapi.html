@@ -94,128 +94,38 @@
     <!-- Page Header End -->
 
     <!-- Sesi Pertanyaan Start -->
-    <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <div class="card">
-              <div class="card-body">
-                <div class="question" id="question1">
-                  <h5 class="card-title">Pertanyaan 1 dari 30</h5>
-                  <p class="card-text">Apa jenis kambing Anda?</p>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option1" value="Kambing Kacang">
-                    <label class="form-check-label" for="question1_option1">
-                      Kambing Kacang
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option2" value="Kambing Etawa">
-                    <label class="form-check-label" for="question1_option2">
-                      Kambing Etawa
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option3" value="Kambing Peranakan Etawa">
-                    <label class="form-check-label" for="question1_option3">
-                      Kambing Peranakan Etawa
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option4" value="Kambing Jawarandu">
-                    <label class="form-check-label" for="question1_option4">
-                      Kambing Jawarandu
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option5" value="Kambing Boer">
-                    <label class="form-check-label" for="question1_option5">
-                      Kambing Boer
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option6" value="Kambing Saanen">
-                    <label class="form-check-label" for="question1_option6">
-                      Kambing Saanen
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option7" value="Kambing Gembong">
-                    <label class="form-check-label" for="question1_option7">
-                      Kambing Gembrong
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option8" value="Kambing Boerawa/Boerka">
-                    <label class="form-check-label" for="question1_option8">
-                      Kambing Boerawa/Boerka
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option9" value="Kambing Muara">
-                    <label class="form-check-label" for="question1_option9">
-                      Kambing Muara
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option10" value="Kambing Kosta">
-                    <label class="form-check-label" for="question1_option10">
-                      Kambing Kosta
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option11" value="Kambing Marica">
-                    <label class="form-check-label" for="question1_option11">
-                      Kambing Marica
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option12" value="Kambing Samosir">
-                    <label class="form-check-label" for="question1_option12">
-                      Kambing Samosir
-                    </label>
-                  </div>                  
-                </div>
-                <div class="question" id="question2">
-                  <h5 class="card-title">Pertanyaan 2 dari 30</h5>
-                  <p class="card-text">Ini adalah pertanyaan kedua.</p>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="question2_option1" value="option1">
-                    <label class="form-check-label" for="question2_option1">
-                      Pilihan 1
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="question2_option2" value="option2">
-                    <label class="form-check-label" for="question2_option2">
-                      Pilihan 2
-                    </label>
-                  </div>
-                </div>
-                <div class="text-center mt-3">
-                  <button class="btn btn-primary" onclick="previousQuestion()">Sebelumnya</button>
-                  <button class="btn btn-primary mx-2" onclick="nextQuestion()">Selanjutnya</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <!-- Sesi Pertanyaan End -->
-
-    <!-- Sesi Pertanyaan Start -->
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Hasil:</h4>
-              <p>Karena ...... hewan qurban anda memiliki kelayakan untuk dijadikan hewan qurban</p>
-              <button class="btn btn-primary">Deteksi Ulang</button>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title" id="question"></h5>
+          <div id="options"></div>
+          <div class="text-center mt-3">
+            <button class="btn btn-primary" onclick="previousQuestion()">Sebelumnya</button>
+            <button class="btn btn-primary mx-2" onclick="nextQuestion()">Selanjutnya</button>
           </div>
         </div>
       </div>
+    </div>
   </div>
+</div>
+    <!-- Sesi Pertanyaan End -->
+
+    <!-- Sesi Pertanyaan Start -->
+<div class="container mt-3" id="result" style="display: none;">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Hasil:</h4>
+          <p id="resultText"></p>
+          <button class="btn btn-primary" onclick="resetQuiz()">Deteksi Ulang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Sesi Pertanyaan End -->
 
     <!-- Footer Start -->
@@ -300,34 +210,184 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        let currentQuestion = 1;
-        const totalQuestions = document.querySelectorAll('.question').length;
+<script>
+let questions = [
+  {
+    question: "Apakah Anda memiliki sapi?",
+    options: ["Ya", "Tidak"],
+    reason: "Anda tidak memiliki sapi."
+  },
+  {
+    question: "Apakah sapi Anda sudah memiliki dua pasang gigi geraham?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda belum mencapai usia yang cukup. Menurut Hadis, sapi yang akan dikurbankan harus mencapai usia minimal 2 tahun (HR. Ahmad)."
+  },
+  {
+    question: "Apakah sapi Anda tampak sehat dan kuat?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tampak tidak sehat atau lemah. Menurut Hadis, hewan yang sakit tidak boleh dijadikan hewan qurban (HR. Muslim)."
+  },
+  {
+    question: "Apakah sapi Anda memiliki tanduk?",
+    options: ["Ya", "Tidak", "Tanduknya patah"],
+    reason: "Sapi Anda tidak memiliki tanduk atau tanduknya patah. Menurut Hadis, hewan yang tanduknya patah tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+  },
+  {
+    question: "Apakah sapi Anda memiliki kepemilikan yang jelas dan bukan hasil pencurian?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tidak memiliki kepemilikan yang jelas atau hasil pencurian. Menurut syariat, hewan qurban harus milik sendiri dan bukan hasil mencuri atau rampasan."
+  },
+  {
+    question: "Apakah sapi Anda memiliki kaki yang lengkap dan tidak pincang?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tidak memiliki kaki yang lengkap atau pincang. Menurut Hadis, hewan yang pincang tidak boleh dijadikan hewan qurban (HR. Muslim)."
+  },
+  {
+    question: "Apakah sapi Anda memiliki mata yang lengkap dan bisa melihat dengan baik?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tidak memiliki mata yang lengkap atau tidak bisa melihat dengan baik. Menurut Hadis, hewan yang buta tidak boleh dijadikan hewan qurban (HR. Muslim)."
+  },
+  {
+    question: "Apakah sapi Anda memiliki telinga yang lengkap?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tidak memiliki telinga yang lengkap. Menurut Hadis, hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+  },
+  {
+    question: "Apakah sapi Anda memiliki ekor yang lengkap?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda tidak memiliki ekor yang lengkap. Menurut Hadis, hewan yang ekornya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud)."
+  },
+  {
+    question: "Apakah sapi Anda tidak sedang hamil?",
+    options: ["Ya", "Tidak"],
+    reason: "Sapi Anda sedang hamil. Menurut ulama, hewan yang sedang hamil tidak boleh dijadikan hewan qurban."
+  }
+];
+
+let currentQuestion = 0;
+
+let userAnswers = [];
+
+function showQuestion() {
+  let questionElement = document.getElementById('question');
+  let optionsElement = document.getElementById('options');
+
+  questionElement.textContent = questions[currentQuestion].question;
+  optionsElement.innerHTML = '';
+
+  for (let i = 0; i < questions[currentQuestion].options.length; i++) {
+    let optionElement = document.createElement('div');
+    optionElement.className = 'form-check form-check-inline';
+
+    let inputElement = document.createElement('input');
+    inputElement.className = 'form-check-input';
+    inputElement.type = 'radio';
+    inputElement.name = 'option';
+    inputElement.id = 'option' + i;
+    inputElement.value = questions[currentQuestion].options[i];
+
+    // Jika pengguna telah menjawab pertanyaan ini, muat kembali jawabannya
+    if (userAnswers[currentQuestion] === inputElement.value) {
+      inputElement.checked = true;
+    }
+
+    let labelElement = document.createElement('label');
+    labelElement.className = 'form-check-label';
+    labelElement.htmlFor = 'option' + i;
+    labelElement.textContent = questions[currentQuestion].options[i];
+
+    optionElement.appendChild(inputElement);
+    optionElement.appendChild(labelElement);
+    optionsElement.appendChild(optionElement);
+  }
+}
+
+function nextQuestion() {
+  // Cek apakah pengguna telah memilih jawaban
+  let selectedOption = document.querySelector(`input[name="option"]:checked`);
+  
+  if (!selectedOption) {
+    // Hapus pesan peringatan sebelumnya jika ada
+    let previousAlert = document.getElementById('alert');
+    if (previousAlert) {
+      previousAlert.parentNode.removeChild(previousAlert);
+    }
+
+    // Tampilkan pesan peringatan dengan Bootstrap
+    let alertElement = document.createElement('div');
+    alertElement.id = 'alert';
+    alertElement.className = 'alert alert-warning';
+    alertElement.textContent = "Silakan pilih jawaban sebelum melanjutkan.";
     
-        function showQuestion(questionNumber) {
-          document.querySelectorAll('.question').forEach(question => {
-            question.style.display = 'none';
-          });
-    
-          document.getElementById(`question${questionNumber}`).style.display = 'block';
-        }
-    
-        function nextQuestion() {
-          if (currentQuestion < totalQuestions) {
-            currentQuestion++;
-            showQuestion(currentQuestion);
-          }
-        }
-    
-        function previousQuestion() {
-          if (currentQuestion > 1) {
-            currentQuestion--;
-            showQuestion(currentQuestion);
-          }
-        }
-    
-        showQuestion(currentQuestion);
-      </script>
+    let containerElement = document.getElementById('question');
+    containerElement.parentNode.insertBefore(alertElement, containerElement.nextSibling);
+
+    // Hapus pesan peringatan setelah beberapa detik
+    setTimeout(() => {
+      alertElement.parentNode.removeChild(alertElement);
+    }, 3000);
+
+    return;
+  }
+
+  // Simpan jawaban pengguna
+  userAnswers[currentQuestion] = selectedOption.value;
+
+  if (currentQuestion < questions.length - 1) {
+    currentQuestion++;
+    showQuestion();
+  } else {
+    checkAnswers();
+    document.getElementById('result').style.display = 'block';
+  }
+}
+
+function previousQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    showQuestion();
+  }
+}
+
+function checkAnswers() {
+  let valid = true;
+  let invalidReasons = [];
+
+  // Periksa setiap jawaban
+  for (let i = 0; i < userAnswers.length; i++) {
+    if (userAnswers[i] === "Tidak" || userAnswers[i] === "Tanduknya patah") {
+      valid = false;
+      invalidReasons.push(questions[i].reason);
+    }
+  }
+
+  // Jika semua jawaban valid, tampilkan pesan bahwa sapi sah untuk dikurbankan
+  if (valid) {
+    document.getElementById('resultText').textContent = "Sapi Anda sah untuk dikurbankan.";
+  } else {
+    // Jika ada jawaban yang tidak valid, tampilkan alasan mengapa sapi tidak sah untuk dikurbankan
+    document.getElementById('resultText').textContent = "Sapi Anda tidak sah untuk dikurbankan karena: " + invalidReasons.join(", ");
+  }
+}
+
+function resetQuiz() {
+  // Atur ulang pertanyaan saat ini ke pertanyaan pertama
+  currentQuestion = 0;
+
+  // Atur ulang semua pilihan jawaban menjadi tidak dipilih
+  let allOptions = document.querySelectorAll('input[type="radio"]');
+  for (let i = 0; i < allOptions.length; i++) {
+    allOptions[i].checked = false;
+  }
+
+  // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
+  document.getElementById('result').style.display = 'none';
+  showQuestion();
+}
+
+showQuestion();
+</script>
+
 </body>
 
 </html>
