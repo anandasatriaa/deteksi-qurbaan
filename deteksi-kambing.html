@@ -61,7 +61,7 @@
               <div class="nav-item dropdown">
                   <a href="product.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Deteksi</a>
                   <div class="dropdown-menu bg-light m-0">
-                      <a href="deteksi-sapi.html" class="dropdown-item">Sapi</a>
+                      <a href="deteksi-kambing.html" class="dropdown-item">kambing</a>
                       <a href="deteksi-kambing.html" class="dropdown-item">Kambing</a>
                   </div>
               </div>
@@ -94,52 +94,23 @@
     <!-- Page Header End -->
 
     <!-- Sesi Pertanyaan Start -->
-    <div class="container">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <div class="card">
-              <div class="card-body">
-                <div class="question" id="question1">
-                  <h5 class="card-title">Pertanyaan 1 dari 30</h5>
-                  <p class="card-text">Ini adalah pertanyaan pertama.</p>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option1" value="option1">
-                    <label class="form-check-label" for="question1_option1">
-                      Pilihan 1
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question1" id="question1_option2" value="option2">
-                    <label class="form-check-label" for="question1_option2">
-                      Pilihan 2
-                    </label>
-                  </div>
-                </div>
-                <div class="question" id="question2">
-                  <h5 class="card-title">Pertanyaan 2 dari 30</h5>
-                  <p class="card-text">Ini adalah pertanyaan kedua.</p>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="question2_option1" value="option1">
-                    <label class="form-check-label" for="question2_option1">
-                      Pilihan 1
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="question2" id="question2_option2" value="option2">
-                    <label class="form-check-label" for="question2_option2">
-                      Pilihan 2
-                    </label>
-                  </div>
-                </div>
-                <div class="text-center mt-3">
-                  <button class="btn btn-primary" onclick="previousQuestion()">Sebelumnya</button>
-                  <button class="btn btn-primary mx-2" onclick="nextQuestion()">Selanjutnya</button>
-                </div>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" id="question"></h5>
+            <img id="questionImage" src="" alt="Gambar Pertanyaan" style="display: none; width: 100%; height: auto;">
+            <div id="options"></div>
+            <div class="text-center mt-3">
+              <button class="btn btn-primary" onclick="previousQuestion()">Sebelumnya</button>
+              <button class="btn btn-primary mx-2" onclick="nextQuestion()">Selanjutnya</button>
             </div>
           </div>
         </div>
+      </div>
     </div>
+  </div>
       <!-- Sesi Pertanyaan End -->
 
     <!-- Footer Start -->
@@ -224,34 +195,212 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        let currentQuestion = 1;
-        const totalQuestions = document.querySelectorAll('.question').length;
+<script>
+  let questions = [
+    {
+      question: "Apakah Anda memiliki Kambing?",
+      options: ["Ya", "Tidak"],
+      reason: "Minimal harus berakal !, Orang berakal mana yang tidak memiliki kambing tapi mau berqurban Kambing?!!",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda sudah memiliki dua pasang gigi geraham?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda belum mencapai usia yang cukup. Menurut Hadis, kambing yang akan dikurbankan harus mencapai usia minimal 2 tahun (HR. Ahmad).",
+      invalidAnswers: ["Tidak"],
+      questionImage: "/img/goat.png" 
+    },
+    {
+      question: "Apakah kambing Anda tampak sehat dan kuat?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tampak tidak sehat atau lemah. Menurut Hadis, hewan yang sakit tidak boleh dijadikan hewan qurban (HR. Muslim).",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki tanduk?",
+      options: ["Ya", "Tidak", "Tanduknya patah"],
+      reason: "kambing Anda tidak memiliki tanduk atau tanduknya patah. Menurut Hadis, hewan yang tanduknya patah tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+      invalidAnswers: ["Tidak", "Tanduknya patah"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki kepemilikan yang jelas dan bukan hasil pencurian?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tidak memiliki kepemilikan yang jelas atau hasil pencurian. Menurut syariat, hewan qurban harus milik sendiri dan bukan hasil mencuri atau rampasan.",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki kaki yang lengkap dan tidak pincang?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tidak memiliki kaki yang lengkap atau pincang. Menurut Hadis, hewan yang pincang tidak boleh dijadikan hewan qurban (HR. Muslim).",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki mata yang lengkap dan bisa melihat dengan baik?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tidak memiliki mata yang lengkap atau tidak bisa melihat dengan baik. Menurut Hadis, hewan yang buta tidak boleh dijadikan hewan qurban (HR. Muslim).",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki telinga yang lengkap?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tidak memiliki telinga yang lengkap. Menurut Hadis, hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda memiliki ekor yang lengkap?",
+      options: ["Ya", "Tidak"],
+      reason: "kambing Anda tidak memiliki ekor yang lengkap. Menurut Hadis, hewan yang ekornya terpotong tidak boleh dijadikan hewan qurban (HR. Abu Dawud).",
+      invalidAnswers: ["Tidak"]
+    },
+    {
+      question: "Apakah kambing Anda tidak sedang hamil?",
+      options: ["Ya", "Tidak"],
+      reason: "Kambing Anda sedang hamil. Menurut ulama, hewan yang sedang hamil tidak boleh dijadikan hewan qurban.",
+      invalidAnswers: ["Ya"]
+    }
+  ];
+
+  let currentQuestion = 0;
+
+  let userAnswers = [];
+
+  function showQuestion() {
+    let questionElement = document.getElementById('question');
+    let optionsElement = document.getElementById('options');
+    let imageElement = document.getElementById('questionImage'); // Pastikan Anda memiliki elemen dengan id ini di HTML Anda
+
+    questionElement.textContent = questions[currentQuestion].question;
+    optionsElement.innerHTML = '';
+
+      // Jika ada gambar untuk pertanyaan ini, tampilkan gambar tersebut
+    if (questions[currentQuestion].questionImage) {
+      imageElement.src = questions[currentQuestion].questionImage;
+      imageElement.style.display = 'block';
+    } else {
+      imageElement.style.display = 'none';
+    }
+
+    for (let i = 0; i < questions[currentQuestion].options.length; i++) {
+      let optionElement = document.createElement('div');
+      optionElement.className = 'form-check form-check-inline';
+
+      let inputElement = document.createElement('input');
+      inputElement.className = 'form-check-input';
+      inputElement.type = 'radio';
+      inputElement.name = 'option';
+      inputElement.id = 'option' + i;
+      inputElement.value = questions[currentQuestion].options[i];
+
+      // Jika pengguna telah menjawab pertanyaan ini, muat kembali jawabannya
+      if (userAnswers[currentQuestion] === inputElement.value) {
+        inputElement.checked = true;
+      }
+
+      let labelElement = document.createElement('label');
+      labelElement.className = 'form-check-label';
+      labelElement.htmlFor = 'option' + i;
+      labelElement.textContent = questions[currentQuestion].options[i];
+
+      optionElement.appendChild(inputElement);
+      optionElement.appendChild(labelElement);
+      optionsElement.appendChild(optionElement);
+    }
+  }
+
+  function nextQuestion() {
+    // Cek apakah pengguna telah memilih jawaban
+    let selectedOption = document.querySelector(`input[name="option"]:checked`);
     
-        function showQuestion(questionNumber) {
-          document.querySelectorAll('.question').forEach(question => {
-            question.style.display = 'none';
-          });
-    
-          document.getElementById(`question${questionNumber}`).style.display = 'block';
-        }
-    
-        function nextQuestion() {
-          if (currentQuestion < totalQuestions) {
-            currentQuestion++;
-            showQuestion(currentQuestion);
-          }
-        }
-    
-        function previousQuestion() {
-          if (currentQuestion > 1) {
-            currentQuestion--;
-            showQuestion(currentQuestion);
-          }
-        }
-    
-        showQuestion(currentQuestion);
-      </script>
+    if (!selectedOption) {
+      // Hapus pesan peringatan sebelumnya jika ada
+      let previousAlert = document.getElementById('alert');
+      if (previousAlert) {
+        previousAlert.parentNode.removeChild(previousAlert);
+      }
+
+      // Tampilkan pesan peringatan dengan Bootstrap
+      let alertElement = document.createElement('div');
+      alertElement.id = 'alert';
+      alertElement.className = 'alert alert-warning';
+      alertElement.textContent = "Silakan pilih jawaban sebelum melanjutkan.";
+      
+      let containerElement = document.getElementById('question');
+      containerElement.parentNode.insertBefore(alertElement, containerElement.nextSibling);
+
+      // Hapus pesan peringatan setelah beberapa detik
+      setTimeout(() => {
+        alertElement.parentNode.removeChild(alertElement);
+      }, 3000);
+
+      return;
+    }
+
+    // Simpan jawaban pengguna
+    userAnswers[currentQuestion] = selectedOption.value;
+
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      showQuestion();
+    } else {
+      checkAnswers();
+      document.getElementById('result').style.display = 'block';
+    }
+  }
+
+  function previousQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion();
+    }
+  }
+
+  function checkAnswers() {
+    let valid = true;
+    let invalidReasons = [];
+
+    // Periksa setiap jawaban
+    for (let i = 0; i < userAnswers.length; i++) {
+      if (questions[i].invalidAnswers.includes(userAnswers[i])) {
+        valid = false;
+        invalidReasons.push(questions[i].reason);
+      }
+    }
+
+    // Jika semua jawaban valid, tampilkan pesan bahwa kambing sah untuk dikurbankan
+    if (valid) {
+      document.getElementById('resultText').textContent = "kambing Anda sah untuk dikurbankan.";
+    } else {
+      // Jika ada jawaban yang tidak valid, tampilkan alasan mengapa kambing tidak sah untuk dikurbankan
+      let resultText = "kambing Anda tidak sah untuk dikurbankan karena:";
+      let reasonsList = document.createElement('ul');
+      invalidReasons.forEach(reason => {
+        let listItem = document.createElement('li');
+        listItem.textContent = reason;
+        reasonsList.appendChild(listItem);
+      });
+      let resultElement = document.getElementById('resultText');
+      resultElement.innerHTML = resultText;
+      resultElement.appendChild(reasonsList);
+    }
+  }
+
+  function resetQuiz() {
+    // Atur ulang pertanyaan saat ini ke pertanyaan pertama
+    currentQuestion = 0;
+
+    // Atur ulang semua pilihan jawaban menjadi tidak dipilih
+    let allOptions = document.querySelectorAll('input[type="radio"]');
+    for (let i = 0; i < allOptions.length; i++) {
+      allOptions[i].checked = false;
+    }
+
+    // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
+    document.getElementById('result').style.display = 'none';
+    showQuestion();
+  }
+
+  showQuestion();
+</script>
 </body>
 
 </html>
