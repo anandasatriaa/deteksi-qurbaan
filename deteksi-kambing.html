@@ -180,214 +180,217 @@
 <script>
   let questions = [
     {
-      question: "Apakah kambing Anda sehat dan tidak cacat? (Lihat ciri-cirinya pada gambar)",
-      options: ["Ya, sehat", "Tidak sehat"],
-      reason: "kambing Anda dalam keadaan tidak sehat atau cacat. Menurut Hadis dari Al-Bara' bin 'Azib: “Nabi shallallahu ‘alaihi wa sallam bersabda, ‘Ada empat macam hewan yang tidak boleh dijadikan qurban: (1) hewan yang jelas sekali buta sebelah matanya, (2) hewan yang jelas sekali sakitnya, (3) hewan yang jelas sekali pincangnya, dan (4) hewan yang sangat kurus hingga tidak punya sumsum tulang’.”",
-      invalidAnswers: ["Tidak sehat"],
-      questionImage: "/img/kambing/kambing-sehat.jpg"
+      "question": "Apakah kambing Anda sehat dan tidak cacat? (Lihat ciri-cirinya pada gambar)",
+      "options": ["Ya, sehat", "Tidak sehat"],
+      "reason": "kambing Anda dalam keadaan tidak sehat atau cacat. Menurut Hadis dari Al-Bara' bin 'Azib: “Nabi shallallahu ‘alaihi wa sallam bersabda, ‘Ada empat macam hewan yang tidak boleh dijadikan qurban: (1) hewan yang jelas sekali buta sebelah matanya, (2) hewan yang jelas sekali sakitnya, (3) hewan yang jelas sekali pincangnya, dan (4) hewan yang sangat kurus hingga tidak punya sumsum tulang’.”",
+      "invalidAnswers": ["Tidak sehat"],
+      "questionImage": "/img/kambing/kambing-sehat.jpg"
     },
     {
-      question: "Apakah hewan telah mencapai usia minimal untuk qurban (untuk kambing minimal 1 tahun, dan domba minimal 6 tahun atau sudah berganti gigi)?",
-      options: ["Ya, sudah mencapai usia", "Belum mencapai usia yang ditentukan"],
-      reason: "Kambing Anda belum mencapai usia yang cukup. Menurut Hadis dari Jabir bin Abdullah: “Rasulullah shallallahu ‘alaihi wa sallam bersabda: ‘Janganlah kalian menyembelih kecuali musinnah, kecuali jika kalian kesulitan maka sembelihlah jadza’ah dari domba.’” (HR. Muslim no. 1963).Dalam hadis ini, istilah 'musinnah' merujuk pada hewan yang telah mencapai usia tertentu dan memiliki gigi tetap (biasanya berusia satu tahun atau lebih untuk kambing). Sementara 'jadza’ah' merujuk pada domba yang lebih muda yang telah mulai mengganti gigi susunya dengan gigi tetap, biasanya berusia enam bulan hingga satu tahun.",
-      invalidAnswers: ["Belum mencapai usia yang ditentukan"],
-      questionImage: "/img/kambing/gigi-kambing.jpg"
+      "question": "Apakah hewan telah mencapai usia minimal untuk qurban (untuk kambing minimal 1 tahun, dan domba minimal 6 tahun atau sudah berganti gigi)?",
+      "options": ["Ya, sudah mencapai usia", "Belum mencapai usia yang ditentukan"],
+      "reason": "Kambing Anda belum mencapai usia yang cukup. Menurut Hadis dari Jabir bin Abdullah: “Rasulullah shallallahu ‘alaihi wa sallam bersabda: ‘Janganlah kalian menyembelih kecuali musinnah, kecuali jika kalian kesulitan maka sembelihlah jadza’ah dari domba.’” (HR. Muslim no. 1963).Dalam hadis ini, istilah 'musinnah' merujuk pada hewan yang telah mencapai usia tertentu dan memiliki gigi tetap (biasanya berusia satu tahun atau lebih untuk kambing). Sementara 'jadza’ah' merujuk pada domba yang lebih muda yang telah mulai mengganti gigi susunya dengan gigi tetap, biasanya berusia enam bulan hingga satu tahun.",
+      "invalidAnswers": ["Belum mencapai usia yang ditentukan"],
+      "questionImage": "/img/kambing/gigi-kambing.jpg"
     },
     {
-      question: "Apakah kambing Anda memiliki berat yang mencukupi untuk diqurbankan (berat kambing ideal biasanya 20-60 kg lebih)?",
-      options: ["Ya, berat badan cukup", "Tidak, berat belum mencukupi"],
-      reason: "Kambing Anda belum mencukupi berat badan ideal untuk diqurbankan. Menurut praktik di lapangan berat kambing ideal biasanya adalah 20-60 kg lebih, sebaiknya Anda rawat kambing hingga mencapai berat yang ideal.",
-      invalidAnswers: ["Tidak, berat belum mencukupi"],
-      questionImage: "/img/kambing/berat-kambing.jpg"
+      "question": "Apakah kambing Anda memiliki berat yang mencukupi untuk diqurbankan (berat kambing ideal biasanya 20-60 kg lebih)?",
+      "options": ["Ya, berat badan cukup", "Tidak, berat belum mencukupi"],
+      "reason": "Kambing Anda belum mencukupi berat badan ideal untuk diqurbankan. Menurut praktik di lapangan berat kambing ideal biasanya adalah 20-60 kg lebih, sebaiknya Anda rawat kambing hingga mencapai berat yang ideal.",
+      "invalidAnswers": ["Tidak, berat belum mencukupi"],
+      "questionImage": "/img/kambing/berat-kambing.jpg"
     },
     {
-      question: "Apakah kambing Anda diperoleh secara halal (sesuai syariat islam)?",
-      options: ["Ya, saya dapatkan secara halal", "Tidak"],
-      reason: "Kambing Anda tidak layak untuk diqurbankan karena tidak didapatkan secara halal. Menurut Hadis dari Abu Hurairah: Rasulullah ﷺ bersabda, `Allah adalah baik dan Dia tidak menerima kecuali yang baik. Dan Allah telah memerintahkan kepada orang-orang Mukmin seperti yang Dia perintahkan kepada para Rasul. Allah berfirman: 'Wahai Rasul-rasul, makanlah dari yang baik-baik (rezeki) dan kerjakanlah amal yang saleh. Sesungguhnya Aku Maha Mengetahui apa yang kamu kerjakan.'` (QS. Al-Mu'minun: 51)",
-      invalidAnswers: ["Tidak"]
+      "question": "Apakah kambing Anda diperoleh secara halal (sesuai syariat islam)?",
+      "options": ["Ya, saya dapatkan secara halal", "Tidak"],
+      "reason": "Kambing Anda tidak layak untuk diqurbankan karena tidak didapatkan secara halal. Menurut Hadis dari Abu Hurairah: Rasulullah ﷺ bersabda, `Allah adalah baik dan Dia tidak menerima kecuali yang baik. Dan Allah telah memerintahkan kepada orang-orang Mukmin seperti yang Dia perintahkan kepada para Rasul. Allah berfirman: 'Wahai Rasul-rasul, makanlah dari yang baik-baik (rezeki) dan kerjakanlah amal yang saleh. Sesungguhnya Aku Maha Mengetahui apa yang kamu kerjakan.'` (QS. Al-Mu'minun: 51)",
+      "invalidAnswers": ["Tidak"]
     },
     {
-      question: "Apakah kambing tersebut memiliki tanda-tanda kesehatan yang baik, seperti nafsu makan yang baik dan aktif bergerak?",
-      options: ["Ya", "Tidak"],
-      reason: "Kambing Anda tidak memiliki kesehatan yang baik. Sebaiknya rawat hingga kambing tersebut memiliki kesehatan yang baik seperti nafsu makan yang bagus dan aktif bergerak lalu kambing dapat diqurbankan.",
-      invalidAnswers: ["Tidak"]
+      "question": "Apakah kambing tersebut memiliki tanda-tanda kesehatan yang baik, seperti nafsu makan yang baik dan aktif bergerak?",
+      "options": ["Ya", "Tidak"],
+      "reason": "Kambing Anda tidak memiliki kesehatan yang baik. Sebaiknya rawat hingga kambing tersebut memiliki kesehatan yang baik seperti nafsu makan yang bagus dan aktif bergerak lalu kambing dapat diqurbankan.",
+      "invalidAnswers": ["Tidak"]
     },
     {
-      question: "Apakah kambing tersebut memiliki riwayat penyakit yang serius dalam setahun terakhir?",
-      options: ["Ya, terdapat riwayat penyakit", "Tidak"],
-      reason: "Kambing Anda memiliki riwayat penyakit serius dalam setahun terakhir. Menurut syariat, hewan yang memiliki riwayat penyakit serius tidak layak untuk dijadikan hewan qurban.",
-      invalidAnswers: ["Ya, terdapat riwayat penyakit"],
-      questionImage: "/img/kambing/penyakit-kambing.jpg"
+      "question": "Apakah kambing tersebut memiliki riwayat penyakit yang serius dalam setahun terakhir?",
+      "options": ["Ya, terdapat riwayat penyakit", "Tidak"],
+      "reason": "Kambing Anda memiliki riwayat penyakit serius dalam setahun terakhir. Menurut syariat, hewan yang memiliki riwayat penyakit serius tidak layak untuk dijadikan hewan qurban.",
+      "invalidAnswers": ["Ya, terdapat riwayat penyakit"],
+      "questionImage": "/img/kambing/penyakit-kambing.jpg"
     },
     {
-      question: "Apakah kambing tersebut terbebas dari parasit seperti cacing (Anda bisa lihat dari kotorannya)?",
-      options: ["Ya, terbebas dari cacing", "Tidak"],
-      reason: "Kambing Anda tidak terbebas dari parasit seperti cacing. Sebelum diqurbankan, pastikan untuk membersihkan kambing dari parasit seperti cacing untuk menjaga kesehatannya.",
-      invalidAnswers: ["Tidak"],
-      questionImage: "/img/kambing/kambing-kurus.jpg"
+      "question": "Apakah kambing tersebut terbebas dari parasit seperti cacing (Anda bisa lihat dari kotorannya)?",
+      "options": ["Ya, terbebas dari cacing", "Tidak"],
+      "reason": "Kambing Anda tidak terbebas dari parasit seperti cacing. Sebelum diqurbankan, pastikan untuk membersihkan kambing dari parasit seperti cacing untuk menjaga kesehatannya.",
+      "invalidAnswers": ["Tidak"],
+      "questionImage": "/img/kambing/kambing-kurus.jpg"
     },
     {
-      question: "Apakah kambing Anda tidak sedang hamil?",
-      options: ["Ya, sedang hamil", "Tidak sedang hamil"],
-      reason: "Kambing Anda sedang hamil. Berkurban dengan hewan yang hamil pada prinsipnya tidak diperbolehkan menurut mayoritas ulama Mazhab Syafi'iyah. Karena hamil pada dasarnya bisa memberikan pengaruh yang sangat signifikan pada hewan.",
-      invalidAnswers: ["Ya, sedang hamil"],
-      questionImage: "/img/kambing/kambing-hamil.jpg"
+      "question": "Apakah kambing Anda tidak sedang hamil?",
+      "options": ["Ya, sedang hamil", "Tidak sedang hamil"],
+      "reason": "Kambing Anda sedang hamil. Berkurban dengan hewan yang hamil pada prinsipnya tidak diperbolehkan menurut mayoritas ulama Mazhab Syafi'iyah. Karena hamil pada dasarnya bisa memberikan pengaruh yang sangat signifikan pada hewan.",
+      "invalidAnswers": ["Ya, sedang hamil"],
+      "questionImage": "/img/kambing/kambing-hamil.jpg"
     },
     {
-      question: "Apakah kambing Anda dapat berjalan dengan baik dan tidak pincang?",
-      options: ["Ya, berjalan dengan baik", "Tidak"],
-      reason: "Kambing yang tidak pincang menunjukkan kesehatan yang baik. ('Hewan yang pincang tidak layak untuk dijadikan qurban' - HR. Abu Dawud)",
-      invalidAnswers: ["Tidak"],
-      questionImage: "/img/kambing/kambing-pincang.png"
+      "question": "Apakah kambing Anda dapat berjalan dengan baik dan tidak pincang?",
+      "options": ["Ya, berjalan dengan baik", "Tidak"],
+      "reason": "Kambing yang tidak pincang menunjukkan kesehatan yang baik. ('Hewan yang pincang tidak layak untuk dijadikan qurban' - HR. Abu Dawud)",
+      "invalidAnswers": ["Tidak"],
+      "questionImage": "/img/kambing/kambing-pincang.png"
     },
     {
-      question: "Apakah telinga kambing Anda utuh dan tidak terpotong?",
-      options: ["Ya, utuh", "Tidak, seperti ada yang terpotong"],
-      reason: "Kambing dengan telinga utuh lebih disarankan untuk qurban. ('Hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban' - HR. Abu Dawud)",
-      invalidAnswers: ["Tidak, seperti ada yang terpotong"],
-      questionImage: "/img/kambing/telinga-kambing.png"
+      "question": "Apakah telinga kambing Anda utuh dan tidak terpotong?",
+      "options": ["Ya, utuh", "Tidak, seperti ada yang terpotong"],
+      "reason": "Kambing dengan telinga utuh lebih disarankan untuk qurban. ('Hewan yang telinganya terpotong tidak boleh dijadikan hewan qurban' - HR. Abu Dawud)",
+      "invalidAnswers": ["Tidak, seperti ada yang terpotong"],
+      "questionImage": "/img/kambing/telinga-kambing.png"
     },
   ];
 
-let currentQuestion = 0;
-let userAnswers = [];
+  let currentQuestion = 0;
 
-function showQuestion() {
-  let questionElement = document.getElementById('question');
-  let optionsElement = document.getElementById('options');
-  let imageElement = document.getElementById('questionImage'); // Pastikan Anda memiliki elemen dengan id ini di HTML Anda
+  let userAnswers = [];
 
-  questionElement.textContent = questions[currentQuestion].question;
-  optionsElement.innerHTML = '';
+  function showQuestion() {
+    let questionElement = document.getElementById('question');
+    let optionsElement = document.getElementById('options');
+    let imageElement = document.getElementById('questionImage'); // Pastikan Anda memiliki elemen dengan id ini di HTML Anda
 
-  // Jika ada gambar untuk pertanyaan ini, tampilkan gambar tersebut
-  if (questions[currentQuestion].questionImage) {
-    imageElement.src = questions[currentQuestion].questionImage;
-    imageElement.style.display = 'block';
-  } else {
-    imageElement.style.display = 'none';
-  }
+    questionElement.textContent = questions[currentQuestion].question;
+    optionsElement.innerHTML = '';
 
-  for (let i = 0; i < questions[currentQuestion].options.length; i++) {
-    let optionElement = document.createElement('div');
-    optionElement.className = 'form-check form-check-inline';
-
-    let inputElement = document.createElement('input');
-    inputElement.className = 'form-check-input';
-    inputElement.type = 'radio';
-    inputElement.name = 'option';
-    inputElement.id = 'option' + i;
-    inputElement.value = questions[currentQuestion].options[i];
-
-    // Jika pengguna telah menjawab pertanyaan ini, muat kembali jawabannya
-    if (userAnswers[currentQuestion] === inputElement.value) {
-      inputElement.checked = true;
+      // Jika ada gambar untuk pertanyaan ini, tampilkan gambar tersebut
+    if (questions[currentQuestion].questionImage) {
+      imageElement.src = questions[currentQuestion].questionImage;
+      imageElement.style.display = 'block';
+    } else {
+      imageElement.style.display = 'none';
     }
 
-    let labelElement = document.createElement('label');
-    labelElement.className = 'form-check-label';
-    labelElement.htmlFor = 'option' + i;
-    labelElement.textContent = questions[currentQuestion].options[i];
+    for (let i = 0; i < questions[currentQuestion].options.length; i++) {
+      let optionElement = document.createElement('div');
+      optionElement.className = 'form-check form-check-inline';
 
-    optionElement.appendChild(inputElement);
-    optionElement.appendChild(labelElement);
-    optionsElement.appendChild(optionElement);
-  }
-}
+      let inputElement = document.createElement('input');
+      inputElement.className = 'form-check-input';
+      inputElement.type = 'radio';
+      inputElement.name = 'option';
+      inputElement.id = 'option' + i;
+      inputElement.value = questions[currentQuestion].options[i];
 
-function nextQuestion() {
-  // Cek apakah pengguna telah memilih jawaban
-  let selectedOption = document.querySelector(`input[name="option"]:checked`);
-  
-  if (!selectedOption) {
-    // Hapus pesan peringatan sebelumnya jika ada
-    let previousAlert = document.getElementById('alert');
-    if (previousAlert) {
-      previousAlert.parentNode.removeChild(previousAlert);
+      // Jika pengguna telah menjawab pertanyaan ini, muat kembali jawabannya
+      if (userAnswers[currentQuestion] === inputElement.value) {
+        inputElement.checked = true;
+      }
+
+      let labelElement = document.createElement('label');
+      labelElement.className = 'form-check-label';
+      labelElement.htmlFor = 'option' + i;
+      labelElement.textContent = questions[currentQuestion].options[i];
+
+      optionElement.appendChild(inputElement);
+      optionElement.appendChild(labelElement);
+      optionsElement.appendChild(optionElement);
     }
+  }
 
-    // Tampilkan pesan peringatan dengan Bootstrap
-    let alertElement = document.createElement('div');
-    alertElement.id = 'alert';
-    alertElement.className = 'alert alert-warning';
-    alertElement.textContent = "Silakan pilih jawaban sebelum melanjutkan.";
+  function nextQuestion() {
+    // Cek apakah pengguna telah memilih jawaban
+    let selectedOption = document.querySelector(`input[name="option"]:checked`);
     
-    let containerElement = document.getElementById('question');
-    containerElement.parentNode.insertBefore(alertElement, containerElement.nextSibling);
+    if (!selectedOption) {
+      // Hapus pesan peringatan sebelumnya jika ada
+      let previousAlert = document.getElementById('alert');
+      if (previousAlert) {
+        previousAlert.parentNode.removeChild(previousAlert);
+      }
 
-    // Hapus pesan peringatan setelah beberapa detik
-    setTimeout(() => {
-      alertElement.parentNode.removeChild(alertElement);
-    }, 3000);
+      // Tampilkan pesan peringatan dengan Bootstrap
+      let alertElement = document.createElement('div');
+      alertElement.id = 'alert';
+      alertElement.className = 'alert alert-warning';
+      alertElement.textContent = "Silakan pilih jawaban sebelum melanjutkan.";
+      
+      let containerElement = document.getElementById('question');
+      containerElement.parentNode.insertBefore(alertElement, containerElement.nextSibling);
 
-    return;
-  }
+      // Hapus pesan peringatan setelah beberapa detik
+      setTimeout(() => {
+        alertElement.parentNode.removeChild(alertElement);
+      }, 3000);
 
-  // Simpan jawaban pengguna
-  userAnswers[currentQuestion] = selectedOption.value;
+      return;
+    }
 
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    showQuestion();
-  } else {
-    checkAnswers();
-    document.getElementById('result').style.display = 'block';
-  }
-}
+    // Simpan jawaban pengguna
+    userAnswers[currentQuestion] = selectedOption.value;
 
-function previousQuestion() {
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    showQuestion();
-  }
-}
-
-function checkAnswers() {
-  let valid = true;
-  let invalidReasons = [];
-
-  // Periksa setiap jawaban
-  for (let i = 0; i < userAnswers.length; i++) {
-    if (questions[i].invalidAnswers.includes(userAnswers[i])) {
-      valid = false;
-      invalidReasons.push(questions[i].reason);
+    if (currentQuestion < questions.length - 1) {
+      currentQuestion++;
+      showQuestion();
+    } else {
+      checkAnswers();
+      document.getElementById('result').style.display = 'block';
     }
   }
 
-  // Jika semua jawaban valid, tampilkan pesan bahwa kambing sah untuk dikurbankan
-  if (valid) {
-    document.getElementById('resultText').textContent = "kambing Anda sah untuk dikurbankan.";
-  } else {
-    // Jika ada jawaban yang tidak valid, tampilkan alasan mengapa kambing tidak sah untuk dikurbankan
-    let resultText = "kambing Anda tidak sah untuk dikurbankan karena:";
-    let reasonsList = document.createElement('ul');
-    invalidReasons.forEach(reason => {
-      let listItem = document.createElement('li');
-      listItem.textContent = reason;
-      reasonsList.appendChild(listItem);
-    });
-    let resultElement = document.getElementById('resultText');
-    resultElement.innerHTML = resultText;
-    resultElement.appendChild(reasonsList);
-  }
-}
-
-function resetQuiz() {
-  // Atur ulang pertanyaan saat ini ke pertanyaan pertama
-  currentQuestion = 0;
-
-  // Atur ulang semua pilihan jawaban menjadi tidak dipilih
-  let allOptions = document.querySelectorAll('input[type="radio"]');
-  for (let i = 0; i < allOptions.length; i++) {
-    allOptions[i].checked = false;
+  function previousQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion();
+    }
   }
 
-  // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
-  document.getElementById('result').style.display = 'none';
+  function checkAnswers() {
+    let valid = true;
+    let invalidReasons = [];
+
+    // Periksa setiap jawaban
+    for (let i = 0; i < userAnswers.length; i++) {
+      if (questions[i].invalidAnswers.includes(userAnswers[i])) {
+        valid = false;
+        invalidReasons.push(questions[i].reason);
+      }
+    }
+
+    // Jika semua jawaban valid, tampilkan pesan bahwa sapi sah untuk dikurbankan
+    if (valid) {
+      document.getElementById('resultText').textContent = "Sapi Anda sah untuk dikurbankan.";
+    } else {
+      // Jika ada jawaban yang tidak valid, tampilkan alasan mengapa sapi tidak sah untuk dikurbankan
+      let resultText = "Sapi Anda tidak sah untuk dikurbankan karena alasan berikut:";
+      let reasonsList = document.createElement('ul');
+      invalidReasons.forEach(reasons => {
+        reasons.forEach(reason => {
+          let listItem = document.createElement('li');
+          listItem.textContent = reason;
+          reasonsList.appendChild(listItem);
+        });
+      });
+      let resultElement = document.getElementById('resultText');
+      resultElement.innerHTML = resultText;
+      resultElement.appendChild(reasonsList);
+    }
+  }
+
+  function resetQuiz() {
+    // Atur ulang pertanyaan saat ini ke pertanyaan pertama
+    currentQuestion = 0;
+
+    // Atur ulang semua pilihan jawaban menjadi tidak dipilih
+    let allOptions = document.querySelectorAll('input[type="radio"]');
+    for (let i = 0; i < allOptions.length; i++) {
+      allOptions[i].checked = false;
+    }
+
+    // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
+    document.getElementById('result').style.display = 'none';
+    showQuestion();
+  }
+
   showQuestion();
-}
-
-showQuestion();
 </script>
 </body>
 
