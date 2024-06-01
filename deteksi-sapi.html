@@ -153,8 +153,10 @@
                   <p class="mb-1">Daerah Khusus Ibukota Jakarta 13760</p>
               </div>
               <div class="col-lg-3 col-md-6">
-                  <img src="img/unindra-logo.png" width="180px" alt="">
-              </div>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                    <img src="img/unindra-logo.png" width="180px" alt="">
+                </div>
+            </div>
           </div>
       </div>
   </div>
@@ -405,20 +407,22 @@
       }
   }
 
-  function resetQuiz() {
-      // Atur ulang pertanyaan saat ini ke pertanyaan pertama
-      currentQuestion = 0;
+  function resetAnswers() {
+    // Reset semua jawaban yang sudah dipilih menjadi tidak dipilih
+    userAnswers = [];
+}
 
-      // Atur ulang semua pilihan jawaban menjadi tidak dipilih
-      let allOptions = document.querySelectorAll('input[type="radio"]');
-      for (let i = 0; i < allOptions.length; i++) {
-          allOptions[i].checked = false;
-      }
+function resetQuiz() {
+    // Atur ulang pertanyaan saat ini ke pertanyaan pertama
+    currentQuestion = 0;
 
-      // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
-      document.getElementById('result').style.display = 'none';
-      showQuestion();
-  }
+    // Atur ulang semua pilihan jawaban menjadi tidak dipilih
+    resetAnswers();
+
+    // Sembunyikan elemen hasil dan tampilkan pertanyaan pertama
+    document.getElementById('result').style.display = 'none';
+    showQuestion();
+}
 
   showQuestion();
 
