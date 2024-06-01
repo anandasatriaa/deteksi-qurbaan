@@ -506,3 +506,13 @@
     letter-spacing: 1px;
     box-shadow: none;
 }
+
+.watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0.5; /* Ubah nilai opacity sesuai kebutuhan Anda */
+    pointer-events: none; /* Untuk menghindari interaksi pengguna dengan watermark */
+}
